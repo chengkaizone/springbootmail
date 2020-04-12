@@ -18,7 +18,7 @@ import org.springframework.core.io.ClassPathResource;
 
 import javax.sql.DataSource;
 
-@Configuration
+//@Configuration
 public class CsvBatchJobConfig {
     @Autowired
     JobBuilderFactory jobBuilderFactory;

@@ -14,20 +14,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HelloController {
 
-    @Autowired
-    JobLauncher jobLauncher;
-    @Autowired
-    Job job;
-
     @GetMapping("/hello")
     public void hello() {
         System.out.println("开始执行任务...");
-        try {
-            jobLauncher.run(job, new JobParametersBuilder().toJobParameters());
-        } catch (Exception e) {
-            e.printStackTrace();
-            System.out.println("任务执行出错...");
-        }
+
         System.out.println("任务执行完成...");
     }
 
